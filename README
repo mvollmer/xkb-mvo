@@ -6,5 +6,42 @@ using for 15 years or so.
 
 # How to add an option so that it shows up in GNOME Tweak Tool
 
+- Change /usr/share/X11/xkb/rules/evdev.xml and add a <group> element
+  inside the <optionList> element like this:
 
--
+   <optionList>
+     ...
+     <group>
+       <configItem>
+         <name>tweaks</name>
+         <description>Blah</description>
+       </configItem>
+       <option>
+         <configItem>
+           <name>tweaks:blah</name>
+           <description>Blah blah blah</description>
+         </configItem>
+       </option>
+     </group>
+     ...
+   </optionList>
+
+- Add a line to /usr/share/X11/xkb/rules/evdev like this:
+
+   ! option	=	symbols
+   ...
+   +  tweaks:blah            =       +tweaks(blah)
+   ...
+
+- Create /usr/share/X11/xkb/symbols/tweaks with something like this
+
+   partial modifier_keys
+   xkb_symbols "blah" {
+     [..]
+   };
+
+
+Then run gnome-tweak-tool.  There should be a new entry called
+"Tweaks" in the "Typing" section.  Checking the checkbox should
+immediately activate whatever is in the
+/usr/share/X11/xkb/symbols/tweaks file.
