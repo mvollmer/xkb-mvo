@@ -1,0 +1,22 @@
+--- /usr/share/X11/xkb/rules/evdev.xml	2016-12-05 02:52:49.000000000 +0200
++++ evdev.xml	2016-12-19 14:14:42.794772002 +0200
+@@ -5657,6 +5657,19 @@
+     </layout>
+   </layoutList>
+   <optionList>
++    <group>
++      <configItem>
++        <name>mvo</name>
++        <description>Tweaks for mvo</description>
++      </configItem>
++      <option>
++        <configItem>
++          <name>mvo:tweaks</name>
++          <description>Braces and brackets on F11 and F22, Swap ß and \, Alt and Meta</description>
++        </configItem>
++      </option>
++    </group>
++
+     <group allowMultipleSelection="true">
+       
+       <configItem>
