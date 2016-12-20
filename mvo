@@ -19,8 +19,5 @@ xkb_symbols "tweaks" {
     };
     key <RCTL> {         [           Alt_R ] };
     modifier_map Mod1 { <RCTL> };
-    modifier_map Mod4 { <RWIN> };
-    modifier_map Mod5 { <MDSW> };
-    modifier_map Mod4 { <SUPR> };
     modifier_map Mod3 { <HYPR> };
 };
