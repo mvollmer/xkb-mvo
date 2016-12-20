@@ -1,6 +1,6 @@
 install:
-	patch /usr/share/X11/xkb/rules/evdev.xml evdev.xml.patch
-	patch /usr/share/X11/xkb/rules/evdev evdev.patch
+	./trypatch /usr/share/X11/xkb/rules/evdev.xml evdev.xml.patch
+	./trypatch /usr/share/X11/xkb/rules/evdev evdev.patch
 	cp mvo /usr/share/X11/xkb/symbols/
 
 diff:
