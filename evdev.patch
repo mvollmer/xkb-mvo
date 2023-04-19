@@ -1,10 +1,10 @@
---- /usr/share/X11/xkb/rules/evdev	2016-12-05 02:52:49.000000000 +0200
-+++ evdev	2016-12-19 14:18:39.605676802 +0200
-@@ -958,6 +958,7 @@
-   *			misc:typo 	= +typo(base):4
+--- /usr/share/X11/xkb/rules/evdev	2023-02-07 02:00:00.000000000 +0200
++++ evdev	2023-04-19 10:56:43.119989946 +0300
+@@ -824,6 +824,7 @@
+ //  Delete the above two aliases in September 2027.
  
- ! option	=	symbols
+ ! option		=	symbols
 +  mvo:tweaks            =       +mvo(tweaks)
-   grp:shift_toggle	=	+group(shifts_toggle)
    altwin:menu		=	+altwin(menu)
+   altwin:menu_win	=	+altwin(menu_win)
    altwin:meta_alt	=	+altwin(meta_alt)
