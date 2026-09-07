@@ -18,6 +18,6 @@ xkb_symbols "tweaks" {
         symbols[Group1]= [         Hyper_L ]
     };
     key <RCTL> {         [           Alt_R ] };
-    modifier_map Mod1 { <RCTL> };
-    modifier_map Mod3 { <HYPR> };
+    // modifier_map Mod1 { <RCTL> };
+    // modifier_map Mod3 { <HYPR> };
 };
